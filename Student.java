@@ -26,27 +26,27 @@ public class Student {
         // sozlu notu için de 0 ile 100 arasında girilme şartı var
 
         if (mat1 >= 0 && mat1 <= 100) {
-            this.mat.yaziliNote = mat1;
+            mat.yaziliNote = mat1;
         }
 
         if (mat2 >= 0 && mat2 <= 100) {
-            this.mat.sozluNote = mat2;
+            mat.sozluNote = mat2;
         }
 
         if (fizik1 >= 0 && fizik1 <= 100) {
-            this.fizik.yaziliNote = fizik1;
+            fizik.yaziliNote = fizik1;
         }
 
         if (fizik2 >= 0 && fizik2 <= 100) {
-            this.fizik.sozluNote = fizik2;
+            fizik.sozluNote = fizik2;
         }
 
         if (kimya1>= 0 && kimya1 <= 100) {
-            this.kimya.yaziliNote = kimya1;
+            kimya.yaziliNote = kimya1;
         }
 
         if (kimya2 >= 0 && kimya2 <= 100) {
-            this.kimya.sozluNote = kimya2;
+            kimya.sozluNote = kimya2;
         }
 
     }
@@ -56,8 +56,8 @@ public class Student {
         // yazılı ve sozlu notların girilip girilmediğini boolean değer atayarak kontrol ediyoruz, eğer 2 si de girildiyse isCheckPass'ı
         // true dönüyoruz
 
-        boolean isSozluNotlarGirildi = (this.mat.sozluNote != 0 && this.fizik.sozluNote != 0 && this.kimya.sozluNote != 0);
-        boolean isYaziliNotlarGirildi = (this.mat.yaziliNote != 0 && this.fizik.yaziliNote != 0 && this.kimya.yaziliNote != 0);
+        boolean isSozluNotlarGirildi = (mat.sozluNote != 0 && fizik.sozluNote != 0 && kimya.sozluNote != 0);
+        boolean isYaziliNotlarGirildi = (mat.yaziliNote != 0 && fizik.yaziliNote != 0 && kimya.yaziliNote != 0);
 
 
 
@@ -75,15 +75,15 @@ public class Student {
         } else {
 
             if (!isSozluNotlarGirildi) System.out.println(" Sozlu Notlar tam olarak girilmemiş");
-            if(this.mat.sozluNote == 0 )System.out.println(" Matematik sözlu notu eksik veya hatalı");
-            if(this.fizik.sozluNote == 0 )System.out.println(" Fizik sözlu notu eksik veya hatalı");
-            if(this.kimya.sozluNote == 0 )System.out.println(" Kimya sözlu notu eksik veya hatalı");
+            if(mat.sozluNote == 0 )System.out.println(" Matematik sözlu notu eksik veya hatalı");
+            if(fizik.sozluNote == 0 )System.out.println(" Fizik sözlu notu eksik veya hatalı");
+            if(kimya.sozluNote == 0 )System.out.println(" Kimya sözlu notu eksik veya hatalı");
 
 
             if (!isYaziliNotlarGirildi) System.out.println(" Yazılı Notlar tam olarak girilmemiş");
-            if(this.mat.yaziliNote == 0 )System.out.println(" Matematik yazılı notu eksik veya hatalı");
-            if(this.fizik.yaziliNote == 0 )System.out.println(" Fizik yazılı notu eksik veya hatalı");
-            if(this.kimya.yaziliNote == 0 )System.out.println(" Kimya yazılı notu eksik veya hatalı");
+            if(mat.yaziliNote == 0 )System.out.println(" Matematik yazılı notu eksik veya hatalı");
+            if(fizik.yaziliNote == 0 )System.out.println(" Fizik yazılı notu eksik veya hatalı");
+            if(kimya.yaziliNote == 0 )System.out.println(" Kimya yazılı notu eksik veya hatalı");
 
         }
     }

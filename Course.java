@@ -19,7 +19,7 @@ public class Course {
     public void addTeacher(Teacher t) {
         if (this.prefix.equals(t.branch)) {
             this.courseTeacher = t;
-            System.out.println("İşlem başarılı");
+            System.out.println(t.name + " " +this.name +" dersine Öğretmen atama işlemi İşlem başarılı");
         } else {
             System.out.println(t.name + " Akademisyeni bu dersi veremez.");
         }
